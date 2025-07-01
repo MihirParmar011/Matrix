@@ -328,7 +328,7 @@
                 </div>
 
                 <div class="control-group">
-                    <label>🔄 Iterations: <span id="iterLabel">100000</span></label>
+                    <label>🔄 Iterations: <span id="iterLabel">1000</span></label>
                     <input type="range" id="iterations" min="100" max="100000" value="100000" oninput="updateIterLabel()">
                 </div>
 
@@ -564,4 +564,10 @@
         // Handle window resize
         window.addEventListener('resize', function() {
             canvas.width = canvas.offsetWidth * window.devicePixelRatio;
-            canvas.height = canvas.offsetHeight * window.device
+            canvas.height = canvas.offsetHeight * window.devicePixelRatio;
+            ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+            clearCanvas();
+        });
+    </script>
+</body>
+</html>
